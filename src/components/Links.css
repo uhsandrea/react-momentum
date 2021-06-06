@@ -1,0 +1,18 @@
+.links {
+  color: white;
+  font-size: 2.3em;
+}
+
+a {
+  margin: 0 10px;
+}
+
+a:link,
+a:visited,
+a:active {
+  color: inherit;
+}
+
+.link:active {
+  transform: scale(0.85);
+}

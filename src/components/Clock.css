@@ -1,0 +1,12 @@
+.clock {
+  color: white;
+}
+
+.hours,
+.minutes {
+  font-size: 4em;
+}
+
+.period {
+  font-size: 2em;
+}

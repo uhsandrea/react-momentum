@@ -1,8 +1,9 @@
+import React from 'react';
 import './App.css';
 import Clock from "./components/Clock";
 import TodayCalendar from "./components/TodayCalendar";
 import Weather from "./components/Weather";
-import ToDoList from "./components/ToDoList";
+import ToDoList from "./components/ToDoList/ToDoList";
 import Links from "./components/Links";
 
 

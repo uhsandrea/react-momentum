@@ -1,0 +1,49 @@
+.weather-container {
+  color: white;
+  background-color: rgba(255, 255, 255, 0.11);
+  width: 42em;
+}
+
+.current-location {
+  font-size: 1.2em;
+  background-color: #e6e6e628;
+  padding: 0.2em 1em;
+}
+
+.weather-content {
+  display: flex;
+  height: 20vh;
+}
+
+.current-weather {
+  width: 10em;
+  text-align: center;
+}
+.current-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: -1em;
+}
+.current-temp {
+  font-size: 2em;
+  padding-right: 0.2em;
+}
+
+.current-description {
+  font-size: 1.2em;
+  padding-left: 0.2em;
+}
+
+.forecast-weather {
+  list-style: none;
+  display: flex;
+}
+
+.forecast-weather li {
+  width: 4em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
