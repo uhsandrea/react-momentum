@@ -1,18 +1,22 @@
-.weather-container {
+.weather {
   color: white;
   background-color: rgba(255, 255, 255, 0.11);
   width: 42em;
+  margin-left: 2.5em;
+  border-radius: 20px;
 }
 
-.current-location {
+.weather-location {
   font-size: 1.2em;
   background-color: #e6e6e628;
   padding: 0.2em 1em;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
 }
 
 .weather-content {
   display: flex;
-  height: 20vh;
+  height: 10em;
 }
 
 .current-weather {

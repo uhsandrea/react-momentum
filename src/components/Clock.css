@@ -1,10 +1,11 @@
 .clock {
   color: white;
+  margin-bottom: 0.5em;
 }
 
 .hours,
 .minutes {
-  font-size: 4em;
+  font-size: 5em;
 }
 
 .period {

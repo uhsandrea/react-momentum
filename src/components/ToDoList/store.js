@@ -1,40 +1,40 @@
 import { createStore } from "redux";
-import { createAction, createReducer } from "@reduxjs/toolkit";
+import { createSlice } from "@reduxjs/toolkit";
 
 const TODOS_LS = "toDos"
 const loadedToDos = localStorage.getItem(TODOS_LS) ? JSON.parse(localStorage.getItem(TODOS_LS)) : [];
 
-const addToDo = createAction("ADD");
-const deleteToDo = createAction("DELETE");
-const completeToDo = createAction("COMPLETE");
-
-const reducer = createReducer([], {
-  [addToDo]: (state, action) => {
-    return [{ text: action.payload, id: Date.now(), completed: false }, ...state];
-  },
-  [deleteToDo]: (state, action) => {
-    return state.filter(toDo => toDo.id !== action.payload)
-  },
-  [completeToDo]: (state, action) => {
-    return state.map(toDo => {
-      if (toDo.id === action.payload) {
-        return {
-          ...toDo,
-          completed: !toDo.completed
+const toDos = createSlice({
+  name: "toDoReducer",
+  initialState: [],
+  reducers: {
+    addToDo: (state, action) => {
+      return [{ text: action.payload, id: Date.now(), completed: false }, ...state];
+    },
+    deleteToDo: (state, action) => {
+      return state.filter(toDo => toDo.id !== action.payload)
+    },
+    completeToDo: (state, action) => {
+      return state.map(toDo => {
+        if (toDo.id === action.payload) {
+          return {
+            ...toDo,
+            completed: !toDo.completed
+          }
         }
-      }
-      return toDo;
-    })
+        return toDo;
+      })
+    }
   }
 });
 
-const store = createStore(reducer, loadedToDos);
+const store = createStore(toDos.reducer, loadedToDos);
 
-export const actionCreators = {
+export const {
   addToDo,
   deleteToDo,
   completeToDo
-};
+} = toDos.actions;
 
 const saveLocalStorage = () => {
   const toDos = store.getState();

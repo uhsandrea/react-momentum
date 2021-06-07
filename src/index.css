@@ -9,6 +9,9 @@
 body {
   background: linear-gradient(to right top, #5e628f, #a16399);
   font-family: "Poppins", sans-serif;
+}
+
+#root {
   width: 100vw;
   height: 100vh;
 }

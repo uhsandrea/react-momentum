@@ -10,11 +10,14 @@ import Links from "./components/Links";
 function App() {
   return (
     <div className="App">
-      <Clock></Clock>
-      <TodayCalendar></TodayCalendar>
-      <Weather></Weather>
-      <ToDoList></ToDoList>
       <Links></Links>
+      <ToDoList></ToDoList>
+      <Clock></Clock>
+      <div className="calender-weather-wrapper">
+        <TodayCalendar></TodayCalendar>
+        <Weather></Weather>
+      </div>
+      
     </div>
   );
 }

@@ -79,8 +79,8 @@ const Weather = () => {
   }, []);
 
   return (
-    <div className="weather-container">
-      <div className="current-location">
+    <div className="weather">
+      <div className="weather-location">
         {current.location}
       </div>
       <div className="weather-content">

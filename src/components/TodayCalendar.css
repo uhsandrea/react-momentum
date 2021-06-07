@@ -4,6 +4,7 @@
   background: rgba(255, 255, 255, 0.11);
   line-height: 1.125em;
   color: white;
+  border-radius: 20px;
 }
 .react-calendar--doubleView {
   width: 700px;
@@ -36,6 +37,8 @@
   background-color: #e6e6e628;
   height: 44px;
   margin-bottom: 1em;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
 }
 .react-calendar__navigation button {
   min-width: 44px;

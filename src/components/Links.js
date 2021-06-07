@@ -5,7 +5,7 @@ import { SiGmail } from "react-icons/si";
 
 const Links = () => {
   return (
-    <div className = "links">
+    <div className="links">
       <a href="https://www.google.com/" target="_blank" rel="noreferrer"><FaGoogle className="link"/></a>
       <a href="https://mail.google.com/" target="_blank" rel="noreferrer"><SiGmail className="link"/></a>
       <a href="https://www.github.com/" target="_blank" rel="noreferrer"><FaGithub className="link"/></a>

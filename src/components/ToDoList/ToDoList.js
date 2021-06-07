@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { connect } from "react-redux";
-import { actionCreators } from "./store";
+import { addToDo } from "./store";
 import ToDo from "./ToDo";
 import "./ToDoList.css"
-import { SiAddthis } from "react-icons/si";
+import { FaPlusSquare } from "react-icons/fa";
 
 const ToDoList = ({ toDos, addToDo }) => {
   const [text, setText] = useState("");
@@ -19,13 +19,13 @@ const ToDoList = ({ toDos, addToDo }) => {
   }
 
   return (
-    <div className="todolist-container">
-      <h1>ToDo List</h1>
+    <div className="todolist">
+      <h2>ToDo List</h2>
       <form onSubmit={onSubmit}>
-        <input type="text" value={text} onChange={onChange}/>
-        <button><SiAddthis /></button>
+        <input type="text" value={text} onChange={onChange} required/>
+        <button><FaPlusSquare /></button>
       </form>
-      <ul>
+      <ul className="todos">
         {toDos.map(toDo => (
           <ToDo {...toDo} key={toDo.id} />
         ))}
@@ -40,7 +40,7 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
   return {
-    addToDo: text => dispatch(actionCreators.addToDo(text))
+    addToDo: text => dispatch(addToDo(text))
   };
 }
 
