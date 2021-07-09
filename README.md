@@ -2,6 +2,25 @@
 
 Single web page cloning Chrome Momentum extension
 
-Containing live clock, calendar, weather forecast, links, and todo list
+## Built with
 
-Developed by React JS (fetching API, Hooks, Redux, etc.)
+HTML, CSS, JavaScript, React JS (fetching API, Hooks, Redux, etc.)
+
+## Install
+
+```
+npm create-react-app react-momentum
+npm install react-calendar
+npm install react-icons --save
+npm install redux
+npm install react-redux
+npm i gh-pages
+```
+
+## Features
+
+- Live clock
+- Calendar
+- Weather forecast
+- Links
+- Todo list
