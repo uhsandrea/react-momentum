@@ -34,7 +34,7 @@ button {
 }
 
 .todos {
-  overflow: scroll;
+  overflow: auto;
   height: 30vh;
 }
 
